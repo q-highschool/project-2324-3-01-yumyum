@@ -1,6 +1,4 @@
-# Ons project
-
-Gebruik dit bestand voor:
-
-- Een korte beschrijving van je project
-- Instructies over hoe je het project kunt uitvoeren
+# Team YumYum
+Dit is een informatica project, de bedoeling is een website te maken met daarop recepten voor eten.
+Groepsleden:
+- Steven te Voortwis
