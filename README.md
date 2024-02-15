@@ -3,6 +3,11 @@ Dit is een informatica project, de bedoeling is een website te maken met daarop 
 Groepsleden:
 - Steven te Voortwis
 
+De domeinen voor de beoordeling die wij hebben gekozen zijn:
+1. DOMEIN 1
+2. DOMEIN 2
+3. DOMEIN 3
+
 ## Install the dependencies
 ```bash
 npm install
