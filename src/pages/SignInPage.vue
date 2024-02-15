@@ -15,10 +15,6 @@
         />
       </template>
     </q-input>
-    <a class="forgot-password" href="">Forgot your password?</a>
-
-    <br><br>
-    <q-checkbox v-model="rememberMe" dense size="sm" label="Remember me"/>
 
     <br><br>
     <q-btn class="full-width bg-primary text-white" type="submit" label="Sign In"/>
@@ -68,8 +64,4 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.forgot-password {
-  display: inline-block;
-  float: right;
-}
 </style>
