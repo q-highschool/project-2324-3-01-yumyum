@@ -22,7 +22,7 @@
     <br><br>
     <p class="flex flex-center">
       Don't have an account yet?&nbsp;
-      <a href="http://localhost:9000/auth/sign_up">Register now</a>
+      <a href="/auth/sign_up">Register now</a>
     </p>
   </q-form>
 </template>
@@ -46,7 +46,7 @@ export default defineComponent({
       if (form.value.validate()) {
         try {
           await signin(user)
-          await router.push('/u/dashboard')
+          await router.push('/')
         } catch (err) {
         }
       }

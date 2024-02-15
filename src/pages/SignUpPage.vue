@@ -39,7 +39,7 @@
     <br><br>
     <p class="flex flex-center">
       Already have an account?&nbsp;
-      <a href="http://localhost:9000/auth/sign_in">Sign in</a>
+      <a href="/auth/sign_in">Sign in</a>
     </p>
   </q-form>
 </template>
@@ -64,7 +64,7 @@ export default defineComponent({
 
     const submit = async () => {
       if (form.value.validate() && !!await signup(user)) {
-        await router.push('/u/dashboard')
+        await router.push('/')
       }
     }
 
