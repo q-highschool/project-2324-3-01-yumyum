@@ -22,6 +22,7 @@ In order to use Firebase you need to configure it. This is actually quite easy:
 5. Then fill in the variables in the file `.env`, leave `.env_example` empty.
 
 If the project already existed you can skip the last step.
+
 6. Last but not least, enable Email/Password authentication, to do this go to Build --> Authentication in the sidebar. And then press get Started and enable Email/Password authentication.
 
 Make sure to never commit your .env file, because this contains obviously vulnerable data.
