@@ -9,6 +9,7 @@ De domeinen voor de beoordeling die wij hebben gekozen zijn:
 3. DOMEIN 3
 
 ## Install the dependencies
+When you want to develop this project you need to make sure to go through the following steps, if you just want to see our beautiful product then please go to: https://yumyum-01.firebaseapp.com/.
 ```bash
 npm install
 ```
