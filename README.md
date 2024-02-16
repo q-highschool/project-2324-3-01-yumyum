@@ -3,6 +3,7 @@ Dit is een informatica project, de bedoeling is een website te maken met daarop 
 Groepsleden:
 - Steven te Voortwis
 - Sam Kuijpers
+- Chun-Zhi Zweverink
 
 De domeinen voor de beoordeling die wij hebben gekozen zijn:
 1. DOMEIN 1
