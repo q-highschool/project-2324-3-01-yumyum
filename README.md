@@ -33,3 +33,7 @@ Make sure to never commit your .env file, because this contains obviously vulner
 quasar dev
 ```
 Then open your app, most common it runs on `http://localhost:9000/`
+
+## Hosting
+The site is hosted with Firebase Hosting, using the Firebase Hosting CLI. This makes it quite easy to do. But I am to lazy to explain exactly how it works and how to set it up...<br>
+The hosting URL of this project is: https://yumyum-01.firebaseapp.com/.
