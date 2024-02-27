@@ -12,6 +12,8 @@ De domeinen voor de beoordeling die wij hebben gekozen zijn:
 3. User experience
 
 ## Install the dependencies
+To let this project work in intelij please read the following link: https://www.jetbrains.com/help/idea/installing-and-removing-external-software-using-node-package-manager.html#installingNodeJs
+
 When you want to develop this project you need to make sure to go through the following steps, if you just want to see our beautiful product then please go to: https://yumyum-01.firebaseapp.com/.
 ```bash
 npm install
