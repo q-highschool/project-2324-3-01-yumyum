@@ -6,7 +6,8 @@
       <q-btn color="primary" @click="this.$router.push('/auth/sign_up')">Sign up</q-btn>
       <q-btn color="grey" @click="this.$router.push('/auth/sign_in')">Sign in</q-btn>
     </q-toolbar>
-    About page
+    Avocados from Mexico
+    <q-btn round color="primary" icon="shopping_cart" />
   </q-page>
 </template>
 
