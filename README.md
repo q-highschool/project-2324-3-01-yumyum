@@ -4,6 +4,7 @@ Groepsleden:
 - Steven te Voortwis
 - Sam Kuijpers
 - Chun-Zhi Zweverink
+- Emanuelle Coutinho da Silva
 
 De domeinen voor de beoordeling die wij hebben gekozen zijn:
 1. Website
