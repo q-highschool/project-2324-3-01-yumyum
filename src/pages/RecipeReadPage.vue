@@ -1,7 +1,7 @@
 <template>
   <div v-if="Object.keys(recipe).length !== 0">
     <div class="row">
-      <q-btn round icon="arrow_back"/>
+      <q-btn round icon="arrow_back" @click="$router.push('/')"/>
       <h4>&nbsp;{{ recipe.content.title }}</h4>
     </div>
     <p>
