@@ -11,7 +11,8 @@ export const createRecipe = () => {
       owner: auth.currentUser.uid,
       recipeId: recipeRef.id,
       author: {
-        name: auth.currentUser.displayName
+        name: auth.currentUser.displayName,
+        article: ''
       },
       create_ts: firebase.firestore.FieldValue.serverTimestamp(),
       content: {
