@@ -54,3 +54,10 @@ A quick note from me about the database and storage:
 
 I've used firestore since its really easy in use and setup, with the right knowledge...
 I have set it up in like less than an hour, so it's absolutely not designed for high use efficiency. Probably if you would benchmark it (how to benchmark? idk, sounds like a you problem), it would be terrifying, but yeah then just use a scale of the seventies or one that was used long long very long ago, then it probably will be pretty good.
+
+Edit: Yes, if you see the commit history I knew beforehand that I was able to set up the firestore in less than an hour... Only if I remembered how it was done... I didn't so it took me a bit longer, maybe 2 to 3...
+
+
+## Fun and not so useful facts (lol)
+- You can't change your user details, nor password
+- You can't delete your own recipes without access to the firebase console
