@@ -31,7 +31,7 @@ export default route(function (/* { store, ssrContext } */) {
 
 
     if(to.meta.auth && !LocalStorage.has('user')) {
-      return next('/about')
+      return next('/')
     }
 
     if(!to.meta.auth && LocalStorage.has('user')) {
