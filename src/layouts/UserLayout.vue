@@ -41,7 +41,7 @@ export default defineComponent({
     const logout = () => {
       console.log("signout")
       signOutUser().then(() => {
-        router.push('/');
+        router.push('');
       });
     };
 
