@@ -1,6 +1,10 @@
 <template>
   <div>
-    <h4>Edit Recipe</h4>
+    <div class="row">
+<!--     TODO: Some style needs to be done for this awful button...-->
+      <q-btn round icon="arrow_back" @click="$router.push('/user')"/>
+      <h4>Edit Recipe</h4>
+    </div>
     {{recipeContent}}
     <h6 style="margin: 10px 0 0;">Title</h6>
     <q-input dense outlined v-model="recipeContent.title"/>
