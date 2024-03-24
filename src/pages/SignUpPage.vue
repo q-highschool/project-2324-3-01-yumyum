@@ -1,5 +1,10 @@
 <template>
   <h4 class="flex flex-center">Sign Up</h4>
+
+  <q-banner inline-actions class="text-white bg-red" style="margin-bottom: 40px">
+    We highly recommend to save your password and email address, since this is needed to login. And the app currently has no option to reset or change those.
+  </q-banner>
+
   <q-form ref="form" @submit="submit">
     <div class="row">
       <div class="col">
