@@ -30,7 +30,7 @@
 <script>
 import {defineComponent, reactive, ref} from 'vue';
 import {useRouter} from "vue-router";
-import signin from "src/firebase/auth/firebase-signin";
+import signInUser from "src/firebase/auth/firebase-signin";
 
 export default defineComponent({
   name: 'SignInPage',
@@ -45,7 +45,7 @@ export default defineComponent({
     const submit = async () => {
       if (form.value.validate()) {
         try {
-          await signin(user)
+          await signInUser(user)
           await router.push('/')
         } catch (err) {
         }

@@ -2,7 +2,7 @@ import { auth } from '../index.js'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { Loading, Notify } from 'quasar'
 
-const signin = (data) => {
+const signInUser = (data) => {
   return new Promise((resolve, reject) => {
     Loading.show()
     signInWithEmailAndPassword(auth, data.email, data.password).then(userCredential => {
@@ -18,4 +18,4 @@ const signin = (data) => {
     })
   })
 }
-export default signin
+export default signInUser

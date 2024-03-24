@@ -46,7 +46,7 @@
 
 <script>
 import {defineComponent, reactive, ref} from 'vue';
-import signup from 'src/firebase/auth/firebase-signup'
+import signUpUser from 'src/firebase/auth/firebase-signup'
 import {useRouter} from 'vue-router'
 
 
@@ -63,7 +63,7 @@ export default defineComponent({
     const form = ref(null)
 
     const submit = async () => {
-      if (form.value.validate() && !!await signup(user)) {
+      if (form.value.validate() && !!await signUpUser(user)) {
         await router.push('/')
       }
     }

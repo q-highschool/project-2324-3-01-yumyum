@@ -2,7 +2,7 @@ import {auth} from '../index.js'
 import {createUserWithEmailAndPassword, updateProfile} from 'firebase/auth'
 import {Loading, Notify} from 'quasar'
 
-const signup = (data) => {
+const signUpUser = (data) => {
   return new Promise((resolve, reject) => {
     Loading.show()
 
@@ -25,4 +25,4 @@ const signup = (data) => {
   })
 }
 
-export default signup
+export default signUpUser
