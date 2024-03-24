@@ -1,10 +1,16 @@
 <template>
-  <q-layout>
-    <q-toolbar class="bg-amber">
-      <q-toolbar-title>YumYum</q-toolbar-title>
+  <q-layout view="hHh Lpr lff">
+    <q-header>
+      <q-toolbar class="bg-amber">
+        <q-toolbar-title>YumYum</q-toolbar-title>
 
-      <q-btn color="grey" text-color="red" @click="logout">Logout</q-btn>
-    </q-toolbar>
+        <q-btn color="grey" text-color="red" @click="logout">Logout</q-btn>
+      </q-toolbar>
+    </q-header>
+
+    <q-drawer show-if-above v-model="drawer" class="bg-grey-3" style="text-align: center">
+        <q-btn rounded color="primary" no-caps icon-right="add" @click="addRecipe">New recipe&nbsp;</q-btn>
+    </q-drawer>
 
     <q-page-container>
       <router-view/>
@@ -13,9 +19,10 @@
 </template>
 
 <script>
-import {defineComponent} from 'vue';
+import {defineComponent, ref} from 'vue';
 import {useRouter} from "vue-router";
 import signOutUser from 'src/firebase/auth/firebase-signout'
+import {createRecipe} from "src/firebase/firestore/firestore-recipes";
 
 export default defineComponent({
   name: 'UserLayout',
@@ -27,8 +34,17 @@ export default defineComponent({
         router.push('/')
       })
     }
+
+    const addRecipe = () => {
+      createRecipe().then((newRecipeId) => {
+        router.push('/user/e/' + newRecipeId)
+      })
+    }
+
     return {
-      logout
+      logout,
+      drawer: ref(false),
+      addRecipe
     }
   }
 })
