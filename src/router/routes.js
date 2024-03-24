@@ -31,7 +31,7 @@ const routes = [
     component: () => import('layouts/UserLayout.vue'),
     children: [
       {path: '', component: () => import('pages/UserDashboardPage.vue'), meta: {auth: true}}, // e of edit
-      {path: 'e/:recipeId', component: () => import('pages/RecipeReadPage.vue'), meta: {auth: true}}, // e of edit
+      {path: 'e/:recipeId', component: () => import('pages/RecipeEditPage.vue'), meta: {auth: true}}, // e of edit
     ]
   },
 
