@@ -32,10 +32,6 @@ export default route(function (/* { store, ssrContext } */) {
       return next('/auth/sign_in')
     }
 
-    if(!to.meta.auth && LocalStorage.has('user')) {
-      return next('')
-    }
-
     return next()
   })
 
