@@ -1,6 +1,6 @@
-import { auth } from '../index.js'
-import { signOut } from 'firebase/auth'
-import { Loading, Notify } from 'quasar'
+import {auth} from '../index.js'
+import {signOut} from 'firebase/auth'
+import {Loading} from 'quasar'
 
 const signOutUser = () => {
   return new Promise((resolve, reject) => {
@@ -11,10 +11,6 @@ const signOutUser = () => {
       resolve()
     }).catch(err => {
       Loading.hide()
-      Notify.create({
-        type: 'negative',
-        message: err.message
-      })
       reject(err.message)
     })
   })

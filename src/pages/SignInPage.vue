@@ -45,8 +45,9 @@ export default defineComponent({
     const submit = async () => {
       if (form.value.validate()) {
         try {
-          await signInUser(user)
-          await router.push('/')
+          await signInUser(user).then(() => {
+            router.push('/user')
+          })
         } catch (err) {
         }
       }

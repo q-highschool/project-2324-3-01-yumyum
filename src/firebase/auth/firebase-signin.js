@@ -1,6 +1,6 @@
-import { auth } from '../index.js'
-import { signInWithEmailAndPassword } from 'firebase/auth'
-import { Loading, Notify } from 'quasar'
+import {auth} from '../index.js'
+import {signInWithEmailAndPassword} from 'firebase/auth'
+import {Loading} from 'quasar'
 
 const signInUser = (data) => {
   return new Promise((resolve, reject) => {
@@ -10,10 +10,6 @@ const signInUser = (data) => {
       resolve(userCredential.user)
     }).catch(err => {
       Loading.hide()
-      Notify.create({
-        type: 'negative',
-        message: err.message
-      })
       reject(err.message)
     })
   })
