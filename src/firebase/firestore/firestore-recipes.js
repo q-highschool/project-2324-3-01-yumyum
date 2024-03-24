@@ -75,7 +75,7 @@ export const updateRecipe = (recipeId, newRecipeContent) => {
 
 export const getAllRecipes = () => {
   return new Promise((resolve, reject) => {
-    db.collection('recipes').get().then((querySnapshot) => {
+    db.collection('recipes').limit(10).get().then((querySnapshot) => {
       const recipesData = querySnapshot.docs.map((doc) => {
         return doc.data();
       });
