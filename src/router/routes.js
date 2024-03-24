@@ -1,12 +1,16 @@
 const routes = [
-  // {
-  //   path: '/about',
-  //   component: () => import('layouts/EmptyLayout.vue'),
-  //   children: [
-  //     {path: '', component: () => import('pages/AboutPage.vue')},
-  //   ],
-  //   meta: {auth: false}
-  // },
+  // Under other all the pages are displayed that aren't really of use in the application itself
+  {
+    path: '/other',
+    component: () => import('layouts/EmptyLayout.vue'),
+    children: [
+      {path: 'about', component: () => import('pages/AboutPage.vue')},
+      {path: 'home', component: () => import('pages/HomePage.vue')}
+    ],
+    meta: {auth: false}
+  },
+
+  // All the pages and layouts that make the app work.
   {
     path: '/auth',
     component: () => import('layouts/AuthLayout.vue'),
@@ -22,7 +26,6 @@ const routes = [
     children: [
       {path: '', component: () => import('pages/DiscoverPage.vue')},
       {path: 'recipe/r/:recipeId', component: () => import('pages/RecipeReadPage.vue')}, // r of read
-      // {path: 'home', component: () => import('pages/HomePage.vue')}
     ],
     meta: {auth: false}
   },
@@ -30,9 +33,10 @@ const routes = [
     path: '/user',
     component: () => import('layouts/UserLayout.vue'),
     children: [
-      {path: '', component: () => import('pages/UserDashboardPage.vue'), meta: {auth: true}},
-      {path: 'e/:recipeId', component: () => import('pages/RecipeEditPage.vue'), meta: {auth: true}}, // e of edit
-    ]
+      {path: '', component: () => import('pages/UserDashboardPage.vue')},
+      {path: 'e/:recipeId', component: () => import('pages/RecipeEditPage.vue')}, // e of edit
+    ],
+    meta: {auth: true}
   },
 
   // Always leave this as last one,

@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col"/>
 
-      <div class="col" style="max-width: 1600px">
+      <div class="col-12" style="max-width: 1600px">
         <q-page-container>
           <router-view/>
         </q-page-container>

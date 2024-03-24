@@ -1,7 +1,6 @@
 <template>
-  <div>
+  claskjd
     <h1>User dashboard page</h1>
-  </div>
 </template>
 
 <script>
