@@ -1,5 +1,10 @@
 <template>
   <h4 class="flex flex-center">Sign In</h4>
+
+  <q-banner inline-actions class="text-white bg-red" style="margin-bottom: 40px">
+    Sometimes the login doesn't work, when you reload the page it should. Something with technical issues...
+  </q-banner>
+
   <q-form ref="form" @submit="submit">
     <p class="text-bold">Email address</p>
     <q-input dense v-model="user.email" outlined autocomplete="email"/>
