@@ -1,12 +1,12 @@
 const routes = [
-  {
-    path: '/about',
-    component: () => import('layouts/EmptyLayout.vue'),
-    children: [
-      {path: '', component: () => import('pages/AboutPage.vue')},
-    ],
-    meta: {auth: false}
-  },
+  // {
+  //   path: '/about',
+  //   component: () => import('layouts/EmptyLayout.vue'),
+  //   children: [
+  //     {path: '', component: () => import('pages/AboutPage.vue')},
+  //   ],
+  //   meta: {auth: false}
+  // },
   {
     path: '/auth',
     component: () => import('layouts/AuthLayout.vue'),
@@ -17,12 +17,22 @@ const routes = [
     meta: {auth: false}
   },
   {
-    path: '/',
+    path: '',
     component: () => import('layouts/HomeLayout.vue'),
     children: [
-      {path: '', component: () => import('pages/HomePage.vue')}
+      {path: '', component: () => import('pages/DiscoverPage.vue')},
+      {path: 'recipe/r/:recipeId', component: () => import('pages/RecipeReadPage.vue')}, // r of read
+      // {path: 'home', component: () => import('pages/HomePage.vue')}
     ],
-    meta: {auth: true}
+    meta: {auth: false}
+  },
+  {
+    path: '/user',
+    component: () => import('layouts/UserLayout.vue'),
+    children: [
+      {path: '', component: () => import('pages/UserDashboardPage.vue'), meta: {auth: true}}, // e of edit
+      {path: 'e/:recipeId', component: () => import('pages/RecipeReadPage.vue'), meta: {auth: true}}, // e of edit
+    ]
   },
 
   // Always leave this as last one,

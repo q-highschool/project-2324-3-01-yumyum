@@ -6,10 +6,19 @@
       <q-btn color="primary" @click="this.$router.push('/auth/sign_up')">Sign up</q-btn>
       <q-btn color="grey" @click="this.$router.push('/auth/sign_in')">Sign in</q-btn>
     </q-toolbar>
-    
-    <q-page-container>
-      <router-view/>
-    </q-page-container>
+
+    <div class="row">
+      <div class="col"/>
+
+      <div class="col" style="max-width: 1600px">
+        <q-page-container>
+          <router-view/>
+        </q-page-container>
+      </div>
+
+      <div class="col"/>
+    </div>
+
   </q-layout>
 </template>
 
