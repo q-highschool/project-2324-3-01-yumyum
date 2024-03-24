@@ -1,6 +1,5 @@
-import { initializeApp } from "firebase/app"
-import { getAuth, onAuthStateChanged } from "firebase/auth"
-import { LocalStorage } from 'quasar'
+import {LocalStorage} from 'quasar'
+import firebase from "firebase/compat";
 
 const firebaseConfig = {
   apiKey: process.env.apiKey,
@@ -13,13 +12,23 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+export const app = firebase.initializeApp(firebaseConfig);
+export const db = firebase.firestore(app);
 
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    LocalStorage.set('user', user)
-  } else {
-    LocalStorage.remove('user')
-  }
-});
+firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+  .then(() => {
+    if (firebase.auth().currentUser) {
+      LocalStorage.set('user', firebase.auth().currentUser);
+    } else {
+      LocalStorage.remove('user')
+
+    }
+    // Persistence set successfully
+    // console.log("Persistence set to local storage");
+  })
+  .catch(error => {
+    // Error setting persistence
+    console.error(error);
+  })
+
+export {firebase}

@@ -1,6 +1,9 @@
-import {auth} from '../index.js'
 import {signInWithEmailAndPassword} from 'firebase/auth'
 import {Loading} from 'quasar'
+import {firebase} from '../index.js'
+
+const auth = firebase.auth()
+
 
 const signInUser = (data) => {
   return new Promise((resolve, reject) => {
