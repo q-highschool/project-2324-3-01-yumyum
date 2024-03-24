@@ -28,7 +28,7 @@
     </div>
 
     Currently we are only showing the first 10 recipes to stay hopefully below the free usage limits
-    This should be different so you can access every recipe through at least one way. (Search)
+    This should be different so you can access every recipe through at least one way. (Search, once this is added)
   </q-page>
 </template>
 
