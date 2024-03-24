@@ -9,6 +9,7 @@ export const createRecipe = () => {
     var recipeRef = db.collection('recipes').doc()
     var recipeInfo = {
       owner: auth.currentUser.uid,
+      recipeId: recipeRef.id,
       author: {
         name: auth.currentUser.displayName
       },
@@ -66,6 +67,19 @@ export const updateRecipe = (recipeId, newRecipeContent) => {
       content: newRecipeContent
     }).then(() => {
       resolve()
+    }).catch((error) => {
+      reject(error);
+    })
+  })
+}
+
+export const getAllRecipes = () => {
+  return new Promise((resolve, reject) => {
+    db.collection('recipes').get().then((querySnapshot) => {
+      const recipesData = querySnapshot.docs.map((doc) => {
+        return doc.data();
+      });
+      resolve(recipesData);
     }).catch((error) => {
       reject(error);
     })
