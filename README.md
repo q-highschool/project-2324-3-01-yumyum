@@ -47,3 +47,10 @@ The site is hosted with Firebase Hosting, using the Firebase CLI. This makes it 
 When new features have been coded, then I (scrum master) can deploy these to Firebase.
 
 The hosting URL of this project is: https://yumyum-01.firebaseapp.com/ or https://yumyum-01.web.app/.
+
+
+## Database and storage
+A quick note from me about the database and storage:
+
+I've used firestore since its really easy in use and setup, with the right knowledge...
+I have set it up in like less than an hour, so it's absolutely not designed for high use efficiency. Probably if you would benchmark it (how to benchmark? idk, sounds like a you problem), it would be terrifying, but yeah then just use a scale of the seventies or one that was used long long very long ago, then it probably will be pretty good.
