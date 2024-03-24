@@ -1,5 +1,5 @@
 <template>
-  <h1>User dashboard page</h1>
+  <h5 style="margin-top: 10px; margin-bottom: 0">Your recipes</h5>
   <div v-for="recipe in userRecipes" style="cursor: pointer" :key="recipe.id">
     <q-card style="margin-top: 15px" @click="$router.push(`user/e/${recipe.id}`)">
       {{ recipe}}
