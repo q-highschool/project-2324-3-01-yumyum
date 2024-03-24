@@ -30,7 +30,7 @@ const routes = [
     path: '/user',
     component: () => import('layouts/UserLayout.vue'),
     children: [
-      {path: '', component: () => import('pages/UserDashboardPage.vue'), meta: {auth: true}}, // e of edit
+      {path: '', component: () => import('pages/UserDashboardPage.vue'), meta: {auth: true}},
       {path: 'e/:recipeId', component: () => import('pages/RecipeEditPage.vue'), meta: {auth: true}}, // e of edit
     ]
   },
