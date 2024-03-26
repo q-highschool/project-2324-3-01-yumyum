@@ -2,7 +2,6 @@
 Dit is een informatica project, de bedoeling is een website te maken met daarop recepten voor eten.
 Groepsleden:
 - Steven te Voortwis
-- Sam Kuijpers
 - Chun-Zhi Zweverink
 - Emanuelle Coutinho da Silva
 
